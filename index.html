@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<script src=" https://cdnjs.cloudflare.com/ajax/libs/phaser-ce/2.16.1/phaser.min.js"></script>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="nivel1.js"></script>
+		<script src="menu.js"></script>
+		<script src="win.js"></script>
+		<script src="win2.js"></script>
+		<script src="nivel2.js"></script>
+		<script src="players.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<title>juego</title>
+	</head>
+	<body>
+		<script>
+			//canvas
+			var game = new Phaser.Game(1000,1000 , Phaser.CANVAS, 'phaser-example');
+
+			game.state.add("nivel1", nivel1);
+			game.state.add("nivel2", nivel2);
+			game.state.add("menu", menu);
+			game.state.add("win", win);
+			game.state.add("win2", win2);
+			game.state.add("players", players);
+			game.state.start("menu", menu);
+		</script>	
+
+	</body>
+</html>
